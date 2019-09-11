@@ -66,6 +66,10 @@ if (!function_exists('homescript_input_fields')) {
             $args['custom_attributes']['autocomplete'] = $args['autocomplete'];
         }
 
+        if (!empty($args['autocomplete'])) {
+            $args['custom_attributes']['autocomplete'] = $args['autocomplete'];
+        }
+
         if (true === $args['autofocus']) {
             $args['custom_attributes']['autofocus'] = 'autofocus';
         }

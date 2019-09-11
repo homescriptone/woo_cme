@@ -180,7 +180,9 @@ class Woo_cme {
 		$this->loader->add_filter( 'woocommerce_account_menu_items', $plugin_public, 'add_my_account_link' );
 		$this->loader->add_filter( 'woocommerce_account_produits_endpoint', $plugin_public, 'render_produits_page' );
 		$this->loader->add_filter( 'woocommerce_account_vip_endpoint', $plugin_public, 'render_vip_page' );
-		
+		$this->loader->add_filter( 'woocommerce_account_bienvenue_endpoint', $plugin_public, 'render_bienvenue_page' );
+		$this->loader->add_filter( 'woocommerce_account_ajouter-produit_endpoint', $plugin_public, 'render_ajouter_produit_page' );
+		$this->loader->add_action( 'init', $plugin_public, 'save_product',9999 );
 	}
 
 	/**
